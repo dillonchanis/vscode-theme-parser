@@ -1,6 +1,7 @@
 <template>
   <div class="palette-list-container">
     <template v-if="json">
+      <h2 class="theme-title">{{ json.name }}</h2>
       <AppPaletteList :palettes="colorPalettes" />
     </template>
   </div>
@@ -54,5 +55,10 @@ export default {
 <style scoped>
 .palette-list-container {
   margin-top: 30px;
+}
+
+.theme-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 32px;
 }
 </style>

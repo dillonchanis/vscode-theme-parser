@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'AppPalette',
+  name: "AppPalette",
   props: {
     palette: {
       type: Object
@@ -19,15 +19,15 @@ export default {
   },
   methods: {
     copyToClipboard() {
-      const temp = document.createElement('input')
-      temp.setAttribute('value', this.palette.color)
-      document.body.appendChild(temp)
-      temp.select()
-      document.execCommand('copy')
-      document.body.removeChild(temp)
+      const temp = document.createElement("input");
+      temp.setAttribute("value", this.palette.color);
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand("copy");
+      document.body.removeChild(temp);
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -47,7 +47,8 @@ export default {
 }
 
 .swatch__info {
-  padding: 8px;
+  font-size: 18px;
+  padding: 10px;
   text-align: center;
 }
 

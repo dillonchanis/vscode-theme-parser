@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import AppHeader from './components/Header'
-import AppForm from './components/Form/FormContainer'
-import AppPaletteContainer from './components/Palette/PaletteContainer'
+import AppHeader from "./components/Header";
+import AppForm from "./components/Form/FormContainer";
+import AppPaletteContainer from "./components/Palette/PaletteContainer";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     AppHeader,
     AppForm,
@@ -26,19 +26,23 @@ export default {
   }),
   methods: {
     onSubmit(json) {
-      this.json = JSON.parse(json)
+      this.json = JSON.parse(json);
     }
   }
-}
+};
 </script>
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 ::selection {
   background: rgba(232, 48, 140, 0.15);
 }
 
 #app {
-  font-family: 'Lora', serif;
+  font-family: "Lora", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 35px;
