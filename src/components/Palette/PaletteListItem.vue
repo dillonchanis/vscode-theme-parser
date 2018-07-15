@@ -4,14 +4,14 @@
     <div class="swatch"
          :style="{ backgroundColor: palette.color }"></div>
     <div class="swatch__info">
-      {{ palette.color }}
+      {{ palette.color }} ({{ palette.amount }})
     </div>
   </li>
 </template>
 
 <script>
 export default {
-  name: "AppPalette",
+  name: 'AppPalette',
   props: {
     palette: {
       type: Object
@@ -19,15 +19,15 @@ export default {
   },
   methods: {
     copyToClipboard() {
-      const temp = document.createElement("input");
-      temp.setAttribute("value", this.palette.color);
-      document.body.appendChild(temp);
-      temp.select();
-      document.execCommand("copy");
-      document.body.removeChild(temp);
+      const temp = document.createElement('input')
+      temp.setAttribute('value', this.palette.color)
+      document.body.appendChild(temp)
+      temp.select()
+      document.execCommand('copy')
+      document.body.removeChild(temp)
     }
   }
-};
+}
 </script>
 
 <style scoped>
